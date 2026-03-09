@@ -65,7 +65,7 @@ export default function StickyCountdown() {
         )}
 
         <div className="text-white/30 text-xs hidden sm:block whitespace-nowrap">
-          18 May 2025
+          18 May 2026
         </div>
       </div>
     </div>

@@ -147,7 +147,7 @@ export default function NavBar() {
                 <span className="text-green-400 text-sm">✓</span>
                 <div className="text-center">
                   <div className="text-white/70 font-semibold text-xs sm:text-sm">Japan 2026 Complete</div>
-                  <div className="text-white/30 text-[10px] tracking-wider">18 May – 3 Jun 2025</div>
+                  <div className="text-white/30 text-[10px] tracking-wider">18 May – 3 Jun 2026</div>
                 </div>
                 <span className="text-green-400 text-sm">✓</span>
               </div>
