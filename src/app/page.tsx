@@ -1,4 +1,5 @@
 import { EditProvider } from "@/context/EditContext";
+import StickyCountdown from "@/components/StickyCountdown";
 import Hero from "@/components/Hero";
 import RouteTimeline from "@/components/RouteTimeline";
 import ItinerarySection from "@/components/ItinerarySection";
@@ -6,6 +7,7 @@ import BudgetDashboard from "@/components/BudgetDashboard";
 import BookingsSection from "@/components/BookingsSection";
 import AccommodationSection from "@/components/AccommodationSection";
 import TransportSection from "@/components/TransportSection";
+import KidsWishlist from "@/components/KidsWishlist";
 import PackingList from "@/components/PackingList";
 import FoodBucketList from "@/components/FoodBucketList";
 import TipsSection from "@/components/TipsSection";
@@ -17,7 +19,11 @@ import ChatAssistant from "@/components/ChatAssistant";
 export default function Home() {
   return (
     <EditProvider>
-      <main className="bg-[#0a0a1a] min-h-screen">
+      {/* Sticky countdown bar — always visible at top */}
+      <StickyCountdown />
+
+      {/* Push content below the sticky bar (~40px) */}
+      <main className="bg-[#0a0a1a] min-h-screen pt-10">
         <Hero />
         <RouteTimeline />
         <ItinerarySection />
@@ -25,6 +31,7 @@ export default function Home() {
         <BookingsSection />
         <AccommodationSection />
         <TransportSection />
+        <KidsWishlist />
         <PackingList />
         <FoodBucketList />
         <TipsSection />

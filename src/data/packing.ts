@@ -1,4 +1,4 @@
-export type PackingPerson = "All" | "Dad" | "Mum" | "Oliver" | "Oscar";
+export type PackingPerson = "All" | "Dad" | "Mum" | "Kaylene" | "Kayleb";
 
 export type PackingItem = {
   id: string;
@@ -22,8 +22,8 @@ export const packingList: PackingCategory[] = [
     items: [
       { id: "pack-passport-dad", label: "Passport (valid 6+ months)", person: "Dad" },
       { id: "pack-passport-mum", label: "Passport (valid 6+ months)", person: "Mum" },
-      { id: "pack-passport-oliver", label: "Passport (valid 6+ months)", person: "Oliver" },
-      { id: "pack-passport-oscar", label: "Passport (valid 6+ months)", person: "Oscar" },
+      { id: "pack-passport-kaylene", label: "Passport (valid 6+ months)", person: "Kaylene" },
+      { id: "pack-passport-kayleb", label: "Passport (valid 6+ months)", person: "Kayleb" },
       { id: "pack-travel-insurance", label: "Travel insurance documents", person: "All", note: "Print + save to phone" },
       { id: "pack-jr-pass-voucher", label: "JR Pass exchange vouchers", person: "Dad", note: "Exchange at Narita on arrival" },
       { id: "pack-jr-kansai-pass", label: "JR Kansai-Hiroshima Pass vouchers", person: "Dad" },
@@ -42,7 +42,7 @@ export const packingList: PackingCategory[] = [
       { id: "pack-adapter", label: "Power adapter (Japan uses Type A — same as AU, no adapter needed)", person: "Dad", note: "Voltage is 100V — check your devices" },
       { id: "pack-camera", label: "Camera + memory card + battery", person: "Dad" },
       { id: "pack-earphones", label: "Earphones / AirPods", person: "All" },
-      { id: "pack-ipad", label: "iPad / tablet (for boys in transit)", person: "Oliver" },
+      { id: "pack-ipad", label: "iPad / tablet (for boys in transit)", person: "Kaylene" },
       { id: "pack-pocket-wifi", label: "Pocket Wi-Fi or SIM (pre-order for Japan)", person: "Dad", note: "Order online before you leave — pick up at Narita" },
     ],
   },
@@ -53,8 +53,8 @@ export const packingList: PackingCategory[] = [
     items: [
       { id: "pack-shirts-dad", label: "Light shirts / T-shirts (7+)", person: "Dad" },
       { id: "pack-shirts-mum", label: "Light shirts / T-shirts (7+)", person: "Mum" },
-      { id: "pack-shirts-oliver", label: "Light shirts / T-shirts (7+)", person: "Oliver" },
-      { id: "pack-shirts-oscar", label: "Light shirts / T-shirts (7+)", person: "Oscar" },
+      { id: "pack-shirts-kaylene", label: "Light shirts / T-shirts (7+)", person: "Kaylene" },
+      { id: "pack-shirts-kayleb", label: "Light shirts / T-shirts (7+)", person: "Kayleb" },
       { id: "pack-pants-all", label: "Light pants / shorts (3 pairs each)", person: "All" },
       { id: "pack-rain-jacket", label: "Light rain jacket / windbreaker", person: "All", note: "May–Jun is rainy season — pack one each" },
       { id: "pack-layers", label: "One warm layer (evenings can be cool)", person: "All" },
@@ -87,13 +87,13 @@ export const packingList: PackingCategory[] = [
     emoji: "🎮",
     items: [
       { id: "pack-snacks-boys", label: "Flight snacks for the boys", person: "Mum" },
-      { id: "pack-headphones-oliver", label: "Oliver's headphones / earbuds", person: "Oliver" },
-      { id: "pack-headphones-oscar", label: "Oscar's headphones / earbuds", person: "Oscar" },
-      { id: "pack-download-shows", label: "Download shows / movies for the flight", person: "Oliver", note: "Long-haul — prep is key" },
-      { id: "pack-pokemon-cards", label: "Pokémon cards (buy heaps in Akihabara!)", person: "Oscar", note: "Budget ¥5,000–¥10,000 for card shopping" },
-      { id: "pack-journal-oscar", label: "Travel journal + pens", person: "Oscar" },
-      { id: "pack-daypack-boys", label: "Small daypack each (for daily exploring)", person: "Oliver" },
-      { id: "pack-portable-games", label: "Nintendo Switch / portable games", person: "Oscar" },
+      { id: "pack-headphones-kaylene", label: "Kaylene's headphones / earbuds", person: "Kaylene" },
+      { id: "pack-headphones-kayleb", label: "Kayleb's headphones / earbuds", person: "Kayleb" },
+      { id: "pack-download-shows", label: "Download shows / movies for the flight", person: "Kaylene", note: "Long-haul — prep is key" },
+      { id: "pack-pokemon-cards", label: "Pokémon cards (buy heaps in Akihabara!)", person: "Kayleb", note: "Budget ¥5,000–¥10,000 for card shopping" },
+      { id: "pack-journal-kayleb", label: "Travel journal + pens", person: "Kayleb" },
+      { id: "pack-daypack-boys", label: "Small daypack each (for daily exploring)", person: "Kaylene" },
+      { id: "pack-portable-games", label: "Nintendo Switch / portable games", person: "Kayleb" },
     ],
   },
 ];

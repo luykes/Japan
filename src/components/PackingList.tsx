@@ -7,12 +7,12 @@ import { packingList, type PackingPerson } from "@/data/packing";
 const personColors: Record<PackingPerson, string> = {
   All: "bg-white/10 text-white/60",
   Dad: "bg-blue-500/20 text-blue-300",
-  Mum: "bg-pink-500/20 text-pink-300",
-  Oliver: "bg-emerald-500/20 text-emerald-300",
-  Oscar: "bg-orange-500/20 text-orange-300",
+  Mum: "bg-purple-500/20 text-purple-300",
+  Kaylene: "bg-pink-500/20 text-pink-300",
+  Kayleb: "bg-emerald-500/20 text-emerald-300",
 };
 
-const PEOPLE: PackingPerson[] = ["All", "Dad", "Mum", "Oliver", "Oscar"];
+const PEOPLE: PackingPerson[] = ["All", "Dad", "Mum", "Kaylene", "Kayleb"];
 
 export default function PackingList() {
   const { bookedItems, toggleBooked } = useEdit();
