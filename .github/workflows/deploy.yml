@@ -15,6 +15,7 @@ jobs:
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
+            git config --global --add safe.directory /opt/japan-travel
             cd /opt/japan-travel
             git pull origin main
             echo "ANTHROPIC_API_KEY=${{ secrets.ANTHROPIC_API_KEY }}" > .env.local

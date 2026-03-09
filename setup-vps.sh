@@ -44,13 +44,16 @@ fi
 
 # ── 5. Clone / update repo ─────────────────────────────────────────────────
 echo "[5/9] Cloning repo..."
+git config --global --add safe.directory "$APP_DIR"
 if [ -d "$APP_DIR/.git" ]; then
     git -C "$APP_DIR" pull origin main
 else
     git clone https://github.com/luykes/Japan "$APP_DIR"
 fi
 
-chown -R "$APP_USER":"$APP_USER" "$APP_DIR"
+# Keep repo owned by root so git pulls work without permission issues
+# Only the env file is owned by the app user
+chmod -R 755 "$APP_DIR"
 
 # Write env file placeholder — add ANTHROPIC_API_KEY manually after setup
 if [ ! -f "$APP_DIR/.env.local" ]; then
@@ -60,7 +63,6 @@ if [ ! -f "$APP_DIR/.env.local" ]; then
 ANTHROPIC_API_KEY=
 EOF
     chmod 600 "$APP_DIR/.env.local"
-    chown "$APP_USER":"$APP_USER" "$APP_DIR/.env.local"
 fi
 
 # ── 6. Firewall (UFW) ──────────────────────────────────────────────────────
@@ -139,9 +141,9 @@ nginx -t && systemctl reload nginx
 # ── 9. Build and start Docker ──────────────────────────────────────────────
 echo "[9/9] Building and starting app..."
 cd "$APP_DIR"
-sudo -u "$APP_USER" docker compose down --remove-orphans 2>/dev/null || true
-sudo -u "$APP_USER" docker compose build --no-cache
-sudo -u "$APP_USER" docker compose up -d
+docker compose down --remove-orphans 2>/dev/null || true
+docker compose build --no-cache
+docker compose up -d
 docker image prune -f
 
 # ── Done ───────────────────────────────────────────────────────────────────
