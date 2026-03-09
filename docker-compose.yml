@@ -5,11 +5,10 @@ services:
     restart: always
     ports:
       - "3000:3000"
-    environment:
-      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
     env_file:
       - .env.local
     environment:
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
       - DATA_DIR=/data
     volumes:
       - checklist_data:/data
