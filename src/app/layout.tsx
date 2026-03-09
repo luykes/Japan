@@ -13,7 +13,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Japan Family Adventure 2025 — 18 May to 3 Jun",
+  title: "Japan Family Adventure 2026 — 18 May to 3 Jun",
   description: "Our complete Japan trip planner: Tokyo → Kyoto → Hiroshima → Osaka. 17 days, family of 4.",
 };
 

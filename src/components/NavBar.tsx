@@ -3,8 +3,8 @@
 import { useEffect, useState, useCallback } from "react";
 
 // ── Trip dates ──────────────────────────────────────────────────────────────
-const DEPARTURE = new Date("2025-05-18T17:30:00+09:00");
-const RETURN    = new Date("2025-06-03T23:59:00+09:00");
+const DEPARTURE = new Date("2026-05-18T17:30:00+09:00");
+const RETURN    = new Date("2026-06-03T23:59:00+09:00");
 
 // ── Nav sections ─────────────────────────────────────────────────────────────
 const NAV_LINKS = [
@@ -105,7 +105,7 @@ export default function NavBar() {
           >
             <span className="text-xl group-hover:scale-110 transition-transform">🇯🇵</span>
             <div className="hidden sm:block leading-tight">
-              <div className="text-white font-bold text-sm tracking-tight">Japan 2025</div>
+              <div className="text-white font-bold text-sm tracking-tight">Japan 2026</div>
               <div className="text-white/30 text-[10px] tracking-widest uppercase">Family Adventure</div>
             </div>
           </a>
@@ -146,7 +146,7 @@ export default function NavBar() {
               <div className="flex items-center gap-2">
                 <span className="text-green-400 text-sm">✓</span>
                 <div className="text-center">
-                  <div className="text-white/70 font-semibold text-xs sm:text-sm">Japan 2025 Complete</div>
+                  <div className="text-white/70 font-semibold text-xs sm:text-sm">Japan 2026 Complete</div>
                   <div className="text-white/30 text-[10px] tracking-wider">18 May – 3 Jun 2025</div>
                 </div>
                 <span className="text-green-400 text-sm">✓</span>

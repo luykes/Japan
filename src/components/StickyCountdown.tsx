@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const DEPARTURE = new Date("2025-05-18T17:30:00+09:00");
+const DEPARTURE = new Date("2026-05-18T17:30:00+09:00");
 
 export default function StickyCountdown() {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });

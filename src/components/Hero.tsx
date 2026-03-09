@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const DEPARTURE = new Date("2025-05-18T17:30:00+09:00");
+const DEPARTURE = new Date("2026-05-18T17:30:00+09:00");
 
 // Verified Unsplash photo IDs — reliable Japan imagery
 const HERO_PHOTOS = [
@@ -169,7 +169,7 @@ export default function Hero() {
       >
         {/* Japanese characters decoration */}
         <div className="text-pink-300/60 text-sm tracking-[0.5em] mb-4 font-light">
-          日本 ・ 家族旅行 ・ 2025
+          日本 ・ 家族旅行 ・ 2026
         </div>
 
         <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-4 leading-tight">
@@ -180,7 +180,7 @@ export default function Hero() {
         </h1>
 
         <p className="text-lg md:text-xl text-white/80 mb-3 font-light">
-          Family of 4 · 18 May – 3 June 2025 · 17 Days
+          Family of 4 · 18 May – 3 June 2026 · 17 Days
         </p>
 
         <p className="text-base text-white/60 mb-10">

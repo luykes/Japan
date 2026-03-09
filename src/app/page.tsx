@@ -41,9 +41,9 @@ export default function Home() {
 
         {/* Footer */}
         <footer className="py-12 text-center border-t border-white/5">
-          <div className="text-pink-300/60 text-sm tracking-widest mb-2">日本 ・ 家族旅行 ・ 2025</div>
+          <div className="text-pink-300/60 text-sm tracking-widest mb-2">日本 ・ 家族旅行 ・ 2026</div>
           <p className="text-white/20 text-xs">
-            Japan Family Adventure · 18 May – 3 June 2025 · Family of 4
+            Japan Family Adventure · 18 May – 3 June 2026 · Family of 4
           </p>
         </footer>
       </main>
