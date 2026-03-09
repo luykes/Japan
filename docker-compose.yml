@@ -8,11 +8,7 @@ services:
     env_file:
       - .env.local
     environment:
-      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
       - DATA_DIR=/data
-      - AUTH_USER=${AUTH_USER}
-      - AUTH_PASS=${AUTH_PASS}
-      - SESSION_SECRET=${SESSION_SECRET}
     volumes:
       - checklist_data:/data
 
