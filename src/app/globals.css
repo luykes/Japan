@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --sakura: #FFB7C5;
+  --matcha: #4A7C59;
+  --gold: #C9A84C;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0a0a1a;
+  color: #f0f0f0;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Sakura petal falling animation */
+.sakura-petal {
+  position: fixed;
+  top: -10px;
+  z-index: 9999;
+  pointer-events: none;
+  font-size: 1.2rem;
+  animation: fall linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10vh) rotate(0deg) translateX(0px);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(55vh) rotate(180deg) translateX(30px);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg) translateX(-20px);
+    opacity: 0;
+  }
+}
+
+/* Glassmorphism card */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-dark {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Section divider */
+.section-divider {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--sakura), var(--gold));
+  border-radius: 2px;
+  margin: 0.75rem auto;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a1a;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 183, 197, 0.4);
+  border-radius: 3px;
+}
+
+/* Edit mode highlight */
+.edit-mode-active [contenteditable="true"] {
+  background: rgba(201, 168, 76, 0.1);
+  border: 1px dashed rgba(201, 168, 76, 0.5);
+  border-radius: 4px;
+  padding: 2px 4px;
+  outline: none;
+  cursor: text;
+}
+
+/* Ken Burns slow zoom for slideshow backgrounds */
+@keyframes kenburns {
+  0%   { transform: scale(1.0) translate(0, 0); }
+  100% { transform: scale(1.08) translate(-1%, -1%); }
+}
+.animate-kenburns {
+  animation: kenburns 8s ease-out forwards;
+}
+
+/* Animate on scroll utility */
+.anim-fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.anim-fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Japanese text decoration */
+.jp-stripe {
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    rgba(255, 183, 197, 0.03) 10px,
+    rgba(255, 183, 197, 0.03) 20px
+  );
+}

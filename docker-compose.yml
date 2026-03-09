@@ -1,0 +1,11 @@
+services:
+  app:
+    build: .
+    container_name: japan-travel
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+    env_file:
+      - .env.local
