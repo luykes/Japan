@@ -2,7 +2,7 @@ import { spendOn, saveOn } from "@/data/transport";
 
 export default function SpendSaveSection() {
   return (
-    <section className="py-20 bg-[#0a0a1a]">
+    <section id="spend-save" className="py-20 bg-[#0a0a1a]">
       <div className="max-w-5xl mx-auto px-6">
         <div className="text-center mb-12">
           <p className="text-pink-300 text-sm uppercase tracking-widest mb-2">Money Strategy</p>

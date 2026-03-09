@@ -115,6 +115,11 @@ body {
   transform: translateY(0);
 }
 
+/* Offset anchored sections below the fixed navbar (56px = h-14) */
+section[id] {
+  scroll-margin-top: 64px;
+}
+
 /* Japanese text decoration */
 .jp-stripe {
   background: repeating-linear-gradient(

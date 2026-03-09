@@ -1,5 +1,5 @@
 import { EditProvider } from "@/context/EditContext";
-import StickyCountdown from "@/components/StickyCountdown";
+import NavBar from "@/components/NavBar";
 import Hero from "@/components/Hero";
 import RouteTimeline from "@/components/RouteTimeline";
 import ItinerarySection from "@/components/ItinerarySection";
@@ -19,11 +19,8 @@ import ChatAssistant from "@/components/ChatAssistant";
 export default function Home() {
   return (
     <EditProvider>
-      {/* Sticky countdown bar — always visible at top */}
-      <StickyCountdown />
-
-      {/* Push content below the sticky bar (~40px) */}
-      <main className="bg-[#0a0a1a] min-h-screen pt-10">
+      <NavBar />
+      <main className="bg-[#0a0a1a] min-h-screen">
         <Hero />
         <RouteTimeline />
         <ItinerarySection />

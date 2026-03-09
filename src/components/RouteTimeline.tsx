@@ -11,7 +11,7 @@ const stops = [
 
 export default function RouteTimeline() {
   return (
-    <section className="py-16 px-6 bg-[#0a0a1a]">
+    <section id="route" className="py-16 px-6 bg-[#0a0a1a]">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-12">
           <p className="text-pink-300 text-sm uppercase tracking-widest mb-2">The Route</p>
