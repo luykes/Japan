@@ -3,10 +3,14 @@ import Hero from "@/components/Hero";
 import RouteTimeline from "@/components/RouteTimeline";
 import ItinerarySection from "@/components/ItinerarySection";
 import BudgetDashboard from "@/components/BudgetDashboard";
+import BookingsSection from "@/components/BookingsSection";
 import AccommodationSection from "@/components/AccommodationSection";
 import TransportSection from "@/components/TransportSection";
-import SpendSaveSection from "@/components/SpendSaveSection";
+import PackingList from "@/components/PackingList";
+import FoodBucketList from "@/components/FoodBucketList";
 import TipsSection from "@/components/TipsSection";
+import SpendSaveSection from "@/components/SpendSaveSection";
+import PhrasesSection from "@/components/PhrasesSection";
 import AdminPanel from "@/components/AdminPanel";
 import ChatAssistant from "@/components/ChatAssistant";
 
@@ -18,10 +22,14 @@ export default function Home() {
         <RouteTimeline />
         <ItinerarySection />
         <BudgetDashboard />
+        <BookingsSection />
         <AccommodationSection />
         <TransportSection />
+        <PackingList />
+        <FoodBucketList />
         <TipsSection />
         <SpendSaveSection />
+        <PhrasesSection />
 
         {/* Floating UI */}
         <AdminPanel />
