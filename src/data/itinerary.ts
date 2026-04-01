@@ -1,5 +1,7 @@
 export type Plan = { label: string; items: string[] };
 
+export type Transit = { line: string; from: string; to: string; duration: string; fare: string };
+
 export type Day = {
   day: number;
   date: string;
@@ -9,6 +11,8 @@ export type Day = {
   plans: { a: Plan; b?: Plan; c?: Plan };
   unsplashQuery: string;
   isFlexDay?: boolean;
+  transit?: Transit[];
+  highlights?: string[];
 };
 
 export const itinerary: Day[] = [
@@ -24,6 +28,11 @@ export const itinerary: Day[] = [
       c: { label: "Backup", items: ["Skip sightseeing — just check in and rest", "Konbini grab near Sugamo Station (open 24h)"] },
     },
     unsplashQuery: "narita airport japan",
+    highlights: ["Clear customs & collect bags at Narita T1", "Buy Suica IC cards at JR East counter in arrivals", "Keisei Skyliner to Nippori", "Yamanote Line to Sugamo — 2 min walk to accommodation", "Evening walk Jizo-dori + dinner nearby"],
+    transit: [
+      { line: "Keisei Skyliner", from: "Narita T1", to: "Nippori", duration: "39 min", fare: "¥2,619 adult / ¥1,310 child" },
+      { line: "JR Yamanote Line", from: "Nippori", to: "Sugamo", duration: "~8 min", fare: "~¥200 (IC card)" },
+    ],
   },
   {
     day: 2,
@@ -37,6 +46,10 @@ export const itinerary: Day[] = [
       c: { label: "C Plan", items: ["Stay fully local — explore Sugamo backstreets and Koganji Temple", "Sunshine City Aquarium if energy allows (~¥2,300/person)"] },
     },
     unsplashQuery: "ikebukuro tokyo japan",
+    highlights: ["Morning walk Jizo-dori street (1 min from home)", "Togenuki Jizo shrine + strawberry daifuku", "Yamanote to Ikebukuro", "Sunshine City + Animate manga/anime floors", "Ikebukuro food hall dinner"],
+    transit: [
+      { line: "JR Yamanote Line", from: "Sugamo", to: "Ikebukuro", duration: "~4 min", fare: "~¥170 (IC card)" },
+    ],
   },
   {
     day: 3,
@@ -50,6 +63,12 @@ export const itinerary: Day[] = [
       c: { label: "C Plan", items: ["Sumida River walk from Asakusa (Skytree visible from outside, free)", "Vending machine picnic by the water", "JR Yamanote: Ueno → Sugamo home (6 stops west via Nippori, ~14 min, ~¥210)"] },
     },
     unsplashQuery: "senso-ji temple asakusa tokyo",
+    highlights: ["Yamanote to Nishi-Nippori", "Yanaka Ginza shotengai walk + old townhouses", "Walk south to Ueno Park + Ameyoko market", "Ginza Line to Asakusa", "Senso-ji temple + Nakamise shopping"],
+    transit: [
+      { line: "JR Yamanote Line", from: "Sugamo", to: "Nishi-Nippori", duration: "~5 min", fare: "~¥150 (IC card)" },
+      { line: "Tokyo Metro Ginza Line", from: "Ueno (G16)", to: "Asakusa (G19)", duration: "~5 min", fare: "~¥180 (IC card)" },
+      { line: "JR Yamanote Line", from: "Ueno", to: "Sugamo (home)", duration: "~14 min", fare: "~¥210 (IC card)" },
+    ],
   },
   {
     day: 4,
@@ -63,6 +82,10 @@ export const itinerary: Day[] = [
       c: { label: "C Plan", items: ["Stroll electric town side alleys and maid cafe street", "Konbini snack haul from the giant 7-Eleven on main street", "JR Yamanote: Akihabara → Sugamo home (~18 min, ~¥210)"] },
     },
     unsplashQuery: "akihabara tokyo night lights",
+    highlights: ["Yamanote to Akihabara via Ueno", "Multi-floor arcades: Round1 + Sega HEY", "Super Potato retro game shop (5 floors)", "Yodobashi Camera electronics", "Set a spending cap per kid before entering"],
+    transit: [
+      { line: "JR Yamanote Line", from: "Sugamo", to: "Akihabara", duration: "~18 min", fare: "~¥210 (IC card)" },
+    ],
   },
   {
     day: 5,
@@ -76,6 +99,12 @@ export const itinerary: Day[] = [
       c: { label: "C Plan", items: ["Shibuya Sky rooftop observation deck (~¥2,000/person — book in advance)", "Konbini dinner watching the crossing", "JR Yamanote: Shibuya → Sugamo home (9 stops north, ~30 min, ~¥210)"] },
     },
     unsplashQuery: "shibuya crossing tokyo night",
+    highlights: ["Yamanote to Harajuku via Ikebukuro + Shinjuku", "Meiji Jingu shrine (arrive before 10am)", "Takeshita Street crepes + fashion", "1 more stop to Shibuya", "Shibuya crossing at 17:30–19:00 peak rush"],
+    transit: [
+      { line: "JR Yamanote Line", from: "Sugamo", to: "Harajuku", duration: "~25 min", fare: "~¥210 (IC card)" },
+      { line: "JR Yamanote Line", from: "Harajuku", to: "Shibuya", duration: "~2 min", fare: "~¥150 (IC card)" },
+      { line: "JR Yamanote Line", from: "Shibuya", to: "Sugamo (home)", duration: "~30 min", fare: "~¥210 (IC card)" },
+    ],
   },
   {
     day: 6,
@@ -90,6 +119,11 @@ export const itinerary: Day[] = [
       c: { label: "Option C — Rest Day", items: ["Laundry + supermarket run near Sugamo Station", "Ikebukuro easy half-day: 2 stops on Yamanote (~4 min, ~¥170)", "Rest up — Shinkansen to Kyoto tomorrow"] },
     },
     unsplashQuery: "shinjuku tokyo japan night",
+    highlights: ["Option A: Shinjuku — Golden Gai + Memory Lane", "Option B: teamLab Borderless (book ahead)", "Option C: Laundry + Ikebukuro rest day", "Last full Tokyo day — pack for Kyoto tomorrow"],
+    transit: [
+      { line: "JR Yamanote Line", from: "Sugamo", to: "Shinjuku (Option A)", duration: "~18 min", fare: "~¥210 (IC card)" },
+      { line: "JR Yamanote Line", from: "Sugamo", to: "Ikebukuro (Option C)", duration: "~4 min", fare: "~¥170 (IC card)" },
+    ],
   },
   {
     day: 7,

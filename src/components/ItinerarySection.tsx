@@ -87,6 +87,73 @@ export default function ItinerarySection() {
           ))}
         </div>
 
+        {/* Day Guide — highlights + transit */}
+        {days.some((d) => d.highlights || d.transit) && (
+          <div className="mt-12">
+            <div className="text-center mb-6">
+              <p className="text-pink-300 text-xs uppercase tracking-widest mb-1">Full Breakdown</p>
+              <h3 className="font-display text-2xl text-white">Day Guide &amp; Train Routes</h3>
+              <div className="section-divider mt-3" />
+            </div>
+            <div className="space-y-4">
+              {days.filter((d) => d.highlights || d.transit).map((day) => (
+                <div key={day.day} className="glass rounded-2xl p-5 border border-white/8">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className={`glass-dark rounded-full px-3 py-1 text-xs font-bold text-white shrink-0`}>
+                      Day {day.day}
+                    </div>
+                    <div>
+                      <div className="text-white font-semibold text-sm">{day.title}</div>
+                      <div className="text-white/40 text-xs">{day.date}</div>
+                    </div>
+                  </div>
+
+                  <div className={`grid gap-4 ${day.highlights && day.transit ? "md:grid-cols-2" : "grid-cols-1"}`}>
+                    {/* Highlights */}
+                    {day.highlights && (
+                      <div>
+                        <p className="text-white/40 text-xs uppercase tracking-wider mb-2">What You&apos;re Doing</p>
+                        <ul className="space-y-1.5">
+                          {day.highlights.map((h, i) => (
+                            <li key={i} className="flex items-start gap-2 text-sm text-white/75">
+                              <span className="text-pink-400 mt-0.5 shrink-0">›</span>
+                              {h}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    {/* Transit */}
+                    {day.transit && (
+                      <div>
+                        <p className="text-white/40 text-xs uppercase tracking-wider mb-2">Trains to Catch</p>
+                        <div className="space-y-2">
+                          {day.transit.map((t, i) => (
+                            <div key={i} className="bg-white/5 rounded-xl px-3 py-2.5 border border-white/8">
+                              <div className="flex items-center gap-2 mb-1">
+                                <span className="text-base">🚃</span>
+                                <span className="text-white text-xs font-semibold">{t.line}</span>
+                              </div>
+                              <div className="text-white/60 text-xs pl-7">
+                                {t.from} → {t.to}
+                              </div>
+                              <div className="flex gap-3 pl-7 mt-1">
+                                <span className="text-white/40 text-xs">⏱ {t.duration}</span>
+                                <span className="text-green-400/70 text-xs">💴 {t.fare}</span>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* Transit days */}
         <div className="mt-12">
           <h3 className="font-display text-xl text-white/50 mb-4 text-center">Travel Days</h3>
