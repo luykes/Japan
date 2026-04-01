@@ -3,19 +3,20 @@
 import { useState, useEffect, useCallback } from "react";
 import type { WishlistItem } from "@/app/api/wishlist/route";
 
-type Kid = "Kaylene" | "Kayleb";
+type Kid = "Kaylene" | "Kayleb" | "Marieta";
 
 const KID_META: Record<Kid, { color: string; border: string; bg: string; emoji: string }> = {
-  Kaylene: { color: "text-pink-300", border: "border-pink-500/30", bg: "from-pink-900/10", emoji: "🌸" },
-  Kayleb:  { color: "text-blue-300",  border: "border-blue-500/30",  bg: "from-blue-900/10",  emoji: "⚡" },
+  Kaylene: { color: "text-pink-300",   border: "border-pink-500/30",   bg: "from-pink-900/10",   emoji: "🌸" },
+  Kayleb:  { color: "text-blue-300",   border: "border-blue-500/30",   bg: "from-blue-900/10",   emoji: "⚡" },
+  Marieta: { color: "text-purple-300", border: "border-purple-500/30", bg: "from-purple-900/10", emoji: "🌺" },
 };
 
-const KIDS: Kid[] = ["Kaylene", "Kayleb"];
+const KIDS: Kid[] = ["Kaylene", "Kayleb", "Marieta"];
 
 export default function KidsWishlist() {
   const [items, setItems] = useState<WishlistItem[]>([]);
-  const [inputs, setInputs] = useState<Record<Kid, string>>({ Kaylene: "", Kayleb: "" });
-  const [saving, setSaving] = useState<Record<Kid, boolean>>({ Kaylene: false, Kayleb: false });
+  const [inputs, setInputs] = useState<Record<Kid, string>>({ Kaylene: "", Kayleb: "", Marieta: "" });
+  const [saving, setSaving] = useState<Record<Kid, boolean>>({ Kaylene: false, Kayleb: false, Marieta: false });
   const [loading, setLoading] = useState(true);
 
   const loadItems = useCallback(async () => {
@@ -61,7 +62,7 @@ export default function KidsWishlist() {
     <section id="wishlist" className="py-20 bg-[#0a0a1a]">
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-12">
-          <p className="text-pink-300 text-sm uppercase tracking-widest mb-2">The Kids&apos; Lists</p>
+          <p className="text-pink-300 text-sm uppercase tracking-widest mb-2">Everyone&apos;s Lists</p>
           <h2 className="font-display text-4xl text-white mb-2">Wishlist 🛍</h2>
           <div className="section-divider" />
           <p className="text-white/40 text-sm mt-4">
@@ -69,7 +70,7 @@ export default function KidsWishlist() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {KIDS.map((kid) => {
             const meta = KID_META[kid];
             const kidItems = items.filter((i) => i.kid === kid);
