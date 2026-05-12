@@ -1,4 +1,4 @@
-export type AccomOption = {
+﻿export type AccomOption = {
   suburb: string;
   notes: string;
   searchUrl: string;
@@ -22,8 +22,8 @@ export const accommodation: CityAccom[] = [
   {
     city: "Tokyo",
     type: "Airbnb",
-    checkIn: "Sun 18 May",
-    checkOut: "Sat 24 May",
+    checkIn: "Mon 18 May",
+    checkOut: "Sun 24 May",
     nights: 6,
     reason: "6 nights — Shibuya base puts Harajuku/Meiji Jingu (1 stop), Shinjuku (3 stops), and Shinagawa for Shinkansen (2 stops south) all within easy reach",
     mainSearchUrl: "https://www.airbnb.com.au/s/Shibuya--Tokyo--Japan/homes?checkin=2026-05-18&checkout=2026-05-24&adults=2&children=2&min_bedrooms=2",
@@ -37,8 +37,8 @@ export const accommodation: CityAccom[] = [
   {
     city: "Kyoto",
     type: "Airbnb",
-    checkIn: "Sat 24 May",
-    checkOut: "Wed 28 May",
+    checkIn: "Sun 24 May",
+    checkOut: "Thu 28 May",
     nights: 4,
     reason: "4 nights — central Kyoto address at 北門前町５０７",
     mainSearchUrl: "https://www.airbnb.com.au/s/Kyoto-Station--Kyoto--Japan/homes?checkin=2026-05-24&checkout=2026-05-28&adults=2&children=2&min_bedrooms=2",
@@ -52,8 +52,8 @@ export const accommodation: CityAccom[] = [
   {
     city: "Hiroshima",
     type: "Hotel",
-    checkIn: "Wed 28 May",
-    checkOut: "Thu 29 May",
+    checkIn: "Thu 28 May",
+    checkOut: "Fri 29 May",
     nights: 1,
     reason: "1 night — short stay, Peace Park afternoon arrival + Miyajima early morning departure",
     mainSearchUrl: "https://www.booking.com/searchresults.html?ss=Hiroshima+Japan&checkin_year=2026&checkin_month=5&checkin_monthday=28&checkout_year=2026&checkout_month=5&checkout_monthday=29&group_adults=2&group_children=2&no_rooms=1",
@@ -68,8 +68,8 @@ export const accommodation: CityAccom[] = [
   {
     city: "Osaka",
     type: "Hotel",
-    checkIn: "Thu 29 May",
-    checkOut: "Tue 3 Jun",
+    checkIn: "Fri 29 May",
+    checkOut: "Wed 3 Jun",
     nights: 5,
     reason: "5 nights — Sotetsu Fresa Inn Kitahama, Chuo Ward; 15 min walk to Osaka Castle, easy subway access to Namba and Dotonbori",
     mainSearchUrl: "https://www.booking.com/searchresults.html?ss=Sotetsu+Fresa+Inn+Kitahama+Osaka",

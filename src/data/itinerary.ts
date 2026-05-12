@@ -1,4 +1,4 @@
-export type Plan = { label: string; items: string[] };
+﻿export type Plan = { label: string; items: string[] };
 
 export type Transit = { line: string; from: string; to: string; duration: string; fare: string };
 
@@ -18,7 +18,7 @@ export type Day = {
 export const itinerary: Day[] = [
   {
     day: 1,
-    date: "Sun 18 May",
+    date: "Mon 18 May",
     city: "Tokyo",
     title: "Arrival — Narita to Shibuya",
     objective: "Get in, get settled. Accommodation is at レガリアヒルズ渋谷道玄坂, Maruyamachō — 7 min walk from Shibuya Station.",
@@ -35,7 +35,7 @@ export const itinerary: Day[] = [
   },
   {
     day: 2,
-    date: "Mon 19 May",
+    date: "Tue 19 May",
     city: "Tokyo",
     title: "Shibuya Local + Daikanyama / Nakameguro",
     objective: "Explore the home neighbourhood — Shibuya's cool, relaxed side. Mostly walkable from accommodation.",
@@ -52,7 +52,7 @@ export const itinerary: Day[] = [
   },
   {
     day: 3,
-    date: "Tue 20 May",
+    date: "Wed 20 May",
     city: "Tokyo",
     title: "Yanaka + Ueno + Asakusa",
     objective: "Old Tokyo in one east corridor — historic neighbourhoods, all linked.",
@@ -71,7 +71,7 @@ export const itinerary: Day[] = [
   },
   {
     day: 4,
-    date: "Wed 21 May",
+    date: "Thu 21 May",
     city: "Tokyo",
     title: "Akihabara",
     objective: "Gaming + tech district — the kids will love it.",
@@ -88,7 +88,7 @@ export const itinerary: Day[] = [
   },
   {
     day: 5,
-    date: "Thu 22 May",
+    date: "Fri 22 May",
     city: "Tokyo",
     title: "Harajuku / Meiji Jingu / Shibuya",
     objective: "Harajuku is 1 stop or a 15 min walk from accommodation — make the most of being based here.",
@@ -105,7 +105,7 @@ export const itinerary: Day[] = [
   },
   {
     day: 6,
-    date: "Fri 23 May",
+    date: "Sat 23 May",
     city: "Tokyo",
     title: "Tokyo Flex Day",
     objective: "Recharge, revisit, or squeeze in one more thing before Kyoto tomorrow.",
@@ -124,7 +124,7 @@ export const itinerary: Day[] = [
   },
   {
     day: 7,
-    date: "Sat 24 May",
+    date: "Sun 24 May",
     city: "Transit",
     title: "Tokyo → Kyoto",
     objective: "Scenic Shinkansen transfer day.",
@@ -140,7 +140,7 @@ export const itinerary: Day[] = [
   },
   {
     day: 8,
-    date: "Sun 25 May",
+    date: "Mon 25 May",
     city: "Kyoto",
     title: "Fushimi Inari",
     objective: "Most photogenic morning in Japan.",
@@ -153,7 +153,7 @@ export const itinerary: Day[] = [
   },
   {
     day: 9,
-    date: "Mon 26 May",
+    date: "Tue 26 May",
     city: "Kyoto",
     title: "Eastern Kyoto",
     objective: "Choose one walking zone — don't try to do both.",
@@ -166,7 +166,7 @@ export const itinerary: Day[] = [
   },
   {
     day: 10,
-    date: "Tue 27 May",
+    date: "Wed 27 May",
     city: "Kyoto",
     title: "Nara Day Trip",
     objective: "Feed deer — kids will remember this forever.",
@@ -179,7 +179,7 @@ export const itinerary: Day[] = [
   },
   {
     day: 11,
-    date: "Wed 28 May",
+    date: "Thu 28 May",
     city: "Hiroshima",
     title: "Kyoto → Hiroshima",
     objective: "Transfer day + meaningful afternoon at the Peace Memorial.",
@@ -195,7 +195,7 @@ export const itinerary: Day[] = [
   },
   {
     day: 12,
-    date: "Thu 29 May",
+    date: "Fri 29 May",
     city: "Transit",
     title: "Miyajima Morning → Osaka",
     objective: "Early Miyajima island, then afternoon Shinkansen to food city.",
@@ -212,7 +212,7 @@ export const itinerary: Day[] = [
   },
   {
     day: 13,
-    date: "Fri 30 May",
+    date: "Sat 30 May",
     city: "Osaka",
     title: "Osaka Food Exploration",
     objective: "Namba and Dotonbori — eat everything.",
@@ -225,7 +225,7 @@ export const itinerary: Day[] = [
   },
   {
     day: 14,
-    date: "Sat 31 May",
+    date: "Sun 31 May",
     city: "Osaka",
     title: "Osaka Castle + Nakanoshima",
     objective: "Walk to Osaka Castle from Kitahama — it's 15 min from the hotel.",
@@ -241,7 +241,7 @@ export const itinerary: Day[] = [
   },
   {
     day: 15,
-    date: "Sun 1 Jun",
+    date: "Mon 1 Jun",
     city: "Osaka",
     title: "Shinsekai + Tennoji",
     objective: "Retro Osaka at its weirdest and most fun.",
@@ -257,7 +257,7 @@ export const itinerary: Day[] = [
   },
   {
     day: 16,
-    date: "Mon 2 Jun",
+    date: "Tue 2 Jun",
     city: "Osaka",
     title: "Osaka Flex Day",
     objective: "Final full day — go big or go easy.",
@@ -271,7 +271,7 @@ export const itinerary: Day[] = [
   },
   {
     day: 17,
-    date: "Tue 3 Jun",
+    date: "Wed 3 Jun",
     city: "Transit",
     title: "Departure — Osaka → Kansai Airport",
     objective: "Slow morning, no stress.",
