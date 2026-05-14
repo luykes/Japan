@@ -38,21 +38,21 @@ const dailyCosts: Record<number, string> = {
 
 const dayMapQueries: Record<number, string> = {
   1: "Narita Airport Japan",
-  2: "Senso-ji Temple Asakusa Tokyo",
-  3: "Ueno Park Tokyo Japan",
-  4: "Shibuya Crossing Tokyo",
-  5: "Akihabara Electric Town Tokyo",
-  6: "Shimokitazawa Tokyo Japan",
+  2: "Ueno Park Tokyo Japan",
+  3: "Nakano Broadway Tokyo Japan",
+  4: "teamLab Borderless Azabudai Hills Tokyo",
+  5: "Tokyo Disneyland Maihama Japan",
+  6: "Snoopy Museum Minami-Machida Tokyo",
   7: "Kyoto Station Japan",
   8: "Fushimi Inari Shrine Kyoto",
   9: "Higashiyama District Kyoto",
-  10: "Nara Deer Park Japan",
-  11: "Arashiyama Bamboo Grove Kyoto",
-  12: "Hiroshima Peace Memorial Park",
-  13: "Miyajima Island Itsukushima Shrine",
-  14: "Dotonbori Osaka Japan",
-  15: "Namba Osaka Japan",
-  16: "Universal Studios Japan Osaka",
+  10: "Arashiyama Bamboo Grove Kyoto",
+  11: "Hiroshima Peace Memorial Park",
+  12: "Miyajima Island Itsukushima Shrine",
+  13: "Nara Deer Park Japan",
+  14: "Osaka Castle Japan",
+  15: "Universal Studios Japan Osaka",
+  16: "Shinsekai Osaka Japan",
   17: "Kansai International Airport",
 };
 
@@ -239,6 +239,83 @@ export default function DayCard({ day }: Props) {
                   </li>
                 ))}
               </ul>
+            </div>
+          )}
+
+          {/* Day Guide — time blocks */}
+          {day.timeBlocks && day.timeBlocks.length > 0 && (
+            <div className="space-y-2 pt-1 border-t border-white/5">
+              <p className="text-xs font-bold text-white/30 uppercase tracking-widest">⏰ Schedule</p>
+              {day.timeBlocks.map((block, i) => (
+                <div key={i} className="glass rounded-xl p-3 space-y-1">
+                  <p className="text-xs font-bold text-pink-300/80 uppercase tracking-wider">{block.period}</p>
+                  <ul className="space-y-1">
+                    {block.activities.map((act, j) => (
+                      <li key={j} className="text-xs text-white/70 flex items-start gap-1.5">
+                        <span className="flex-shrink-0 mt-0.5">{activityEmoji(act)}</span>
+                        <span>{act}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  {block.foodRec && (
+                    <p className="text-xs text-yellow-300/70 mt-1">🍜 {block.foodRec}</p>
+                  )}
+                  {block.tip && (
+                    <p className="text-xs text-blue-300/60 italic mt-1">💡 {block.tip}</p>
+                  )}
+                </div>
+              ))}
+            </div>
+          )}
+
+          {/* Tips */}
+          {day.dayTips && day.dayTips.length > 0 && (
+            <div className="space-y-1 pt-1 border-t border-white/5">
+              <p className="text-xs font-bold text-white/30 uppercase tracking-widest">💡 Tips</p>
+              <ul className="space-y-1">
+                {day.dayTips.map((tip, i) => (
+                  <li key={i} className="text-xs text-white/60 flex items-start gap-1.5">
+                    <span className="flex-shrink-0 text-yellow-400">•</span>
+                    <span>{tip}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {/* Rain plan */}
+          {day.rainPlan && (
+            <div className="flex items-start gap-2 bg-blue-500/10 border border-blue-500/20 rounded-xl px-3 py-2">
+              <span className="text-sm flex-shrink-0">☔</span>
+              <p className="text-xs text-blue-200/70"><span className="font-bold text-blue-300/80">Rain plan: </span>{day.rainPlan}</p>
+            </div>
+          )}
+
+          {/* Photo spot */}
+          {day.photoSpot && (
+            <div className="flex items-start gap-2 bg-pink-500/10 border border-pink-500/20 rounded-xl px-3 py-2">
+              <span className="text-sm flex-shrink-0">📸</span>
+              <p className="text-xs text-pink-200/70"><span className="font-bold text-pink-300/80">Photo spot: </span>{day.photoSpot}</p>
+            </div>
+          )}
+
+          {/* Must book */}
+          {day.mustBook && (
+            <div className="flex items-start gap-2 bg-orange-500/10 border border-orange-500/20 rounded-xl px-3 py-2">
+              <span className="text-sm flex-shrink-0">📋</span>
+              <p className="text-xs text-orange-200/70"><span className="font-bold text-orange-300/80">Book ahead: </span>{day.mustBook}</p>
+            </div>
+          )}
+
+          {/* Wishlist hits */}
+          {day.wishlistHits && day.wishlistHits.length > 0 && (
+            <div className="space-y-1.5 pt-1 border-t border-white/5">
+              <p className="text-xs font-bold text-white/30 uppercase tracking-widest">⭐ Wishlist</p>
+              <div className="flex flex-wrap gap-1.5">
+                {day.wishlistHits.map((item, i) => (
+                  <span key={i} className="text-xs bg-yellow-500/15 border border-yellow-500/25 text-yellow-200/70 rounded-full px-2 py-0.5">{item}</span>
+                ))}
+              </div>
             </div>
           )}
 

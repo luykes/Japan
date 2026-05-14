@@ -124,6 +124,30 @@ export const bookings: Booking[] = [
 
   // ── Experiences ──────────────────────────────────────────────────────────
   {
+    id: "exp-teamlab",
+    category: "experiences",
+    title: "teamLab Borderless — Azabudai Hills",
+    date: "21 May 2026",
+    time: "8:30–9:00 entry",
+    location: "Azabudai Hills, Minato, Tokyo",
+    reference: "",
+    cost: "",
+    bookedVia: "teamLab website",
+    notes: "Confirmed · Entry 8:30am · Hibiya Line Shibuya → Roppongi, walk 10 min to Azabudai Hills · Wear comfortable socks",
+  },
+  {
+    id: "exp-teddy-bear-onsen",
+    category: "experiences",
+    title: "Hokkaido Menkoi Kumachan — Teddy Bear Experience",
+    date: "21 May 2026",
+    time: "17:30–19:15",
+    location: "Shibuya, Tokyo",
+    reference: "",
+    cost: "",
+    bookedVia: "",
+    notes: "Confirmed · Teddy bear themed experience near Shibuya · 5 min walk from Harajuku via Yamanote",
+  },
+  {
     id: "exp-disneyland",
     category: "experiences",
     title: "Tokyo Disneyland",
